@@ -1,0 +1,58 @@
+# GloVe result
+Top 5 similar words of seattle are: [('oakland', 0.8497546865847327), ('houston', 0.8431357284111741), ('tampa', 0.8210753134633385), ('baltimore', 0.8162929911178692), ('boston', 0.8030460460165137)]
+Top 5 similar words of communist are: [('soviet', 0.7661717162226557), ('socialist', 0.7422846744119581), ('regime', 0.72001313299318), ('party', 0.7097721221312498), ('revolutionary', 0.6925003220238819)]
+Top 5 similar words of professor are: [('university', 0.810378429623185), ('harvard', 0.7968933662068786), ('economics', 0.7641003171689117), ('associate', 0.7547397067252875), ('scientist', 0.7397826864977104)]
+Top 5 similar words of microsoft are: [('google', 0.8104098502002777), ('software', 0.7803657394718168), ('apple', 0.744940575632319), ('computer', 0.6878046062587753), ('sony', 0.6649439339064892)]
+Top 5 similar words of right are: [('if', 0.7746511328268524), ('back', 0.7733756491453151), ('left', 0.7679621136992457), ('way', 0.7588552388763773), ('put', 0.7557061470927271)]
+Top 5 similar words of park are: [('parks', 0.7290407171810763), ('hill', 0.6913207254142798), ('forest', 0.6692464956354336), ('garden', 0.6670521495824036), ('hall', 0.6595366689416972)]
+Top 5 similar words of date are: [('dates', 0.8661908812277159), ('beginning', 0.7426276554801918), ('prior', 0.7213834635552141), ('next', 0.7110820658814506), ('until', 0.6963138762942336)]
+Top 5 similar words of train are: [('trains', 0.8663253715849139), ('bus', 0.8473865556249379), ('rail', 0.7579620697475061), ('buses', 0.738078196393811), ('passenger', 0.7333152403350125)]
+Top 5 similar words of ship are: [('vessel', 0.9227124720110849), ('ships', 0.8912949263998109), ('boat', 0.8258436237359154), ('cargo', 0.7835855624299012), ('boats', 0.7709022170143037)]
+# word2vec result
+Top 5 similar words of seattle are: [('washington', 0.7883804933209448), ('angeles', 0.7288304084800654), ('vancouver', 0.7257904016347637), ('denver', 0.7218314908607638), ('oakland', 0.7134764066411271)]
+Top 5 similar words of communist are: [('socialist', 0.8347895000082729), ('nationalist', 0.7723867748103702), ('party', 0.7420714353646536), ('revolutionary', 0.7403514065934049), ('militant', 0.6991361716330519)]
+Top 5 similar words of professor are: [('associate', 0.7666401960369674), ('university', 0.7514507735535679), ('scientist', 0.7511296149660104), ('faculty', 0.740470197683144), ('dean', 0.7207371741327727)]
+Top 5 similar words of microsoft are: [('software', 0.8201313259384589), ('windows', 0.7277862099493635), ('users', 0.6840564361495981), ('computers', 0.6708772776432548), ('user', 0.6684417402474976)]
+Top 5 similar words of right are: [('left', 0.7920349993010418), ('hand', 0.7243252972196204), ('handed', 0.6818805890283784), ('arm', 0.6464241452911735), ('wrong', 0.6349227112237725)]
+Top 5 similar words of park are: [('parks', 0.7698314435011662), ('forest', 0.6963248525085234), ('trail', 0.6519645354873538), ('garden', 0.6518233759233808), ('cemetery', 0.6440213562041824)]
+Top 5 similar words of date are: [('dates', 0.8148512680893907), ('prior', 0.6592255116279347), ('unknown', 0.646803552007911), ('beginning', 0.6350694576385848), ('latest', 0.6102221419634459)]
+Top 5 similar words of train are: [('trains', 0.8622013622586533), ('passenger', 0.8028077638824272), ('railway', 0.7467138498622308), ('bus', 0.7462550202575312), ('rail', 0.7266608575510487)]
+Top 5 similar words of ship are: [('vessel', 0.8907317404354474), ('ships', 0.8760082556661604), ('aboard', 0.7896347347969396), ('cruise', 0.7684737075937108), ('boat', 0.7442843722464744)]
+# Word meaning bias under GloVe
+Cosine similarity between man and doctor is: 0.6092161526918838
+Cosine similarity between woman and doctor is: 0.6333478421709177
+Cosine similarity between man and professor is: 0.36735281182608137
+Cosine similarity between woman and professor is: 0.3486022763302136
+Cosine similarity between muslim and terrorism is: 0.4826608292808606
+Cosine similarity between christian and terrorism is: 0.26753691781571537
+# Word meaning bias under word2vec
+Cosine similarity between man and doctor is: 0.4927245462889989
+Cosine similarity between woman and doctor is: 0.5459686127835678
+Cosine similarity between man and professor is: 0.3328713748444931
+Cosine similarity between woman and professor is: 0.3664313883179787
+Cosine similarity between muslim and terrorism is: 0.4956944328802027
+Cosine similarity between christian and terrorism is: 0.33838696931654355
+# Word analogy 1 under GloVe
+Top 5 similar words of king - man + woman are: [('queen', 0.7834414335881459), ('daughter', 0.6809082498424321), ('prince', 0.6713142053187622), ('princess', 0.6644082935602945), ('mother', 0.6579325279654173)]
+Top 5 similar words of paris - france + uk are: [('london', 0.7292129816541559), ('uk', 0.7218955179083064), ('melbourne', 0.5775751481335122), ('2013', 0.5761225252659374), ('2011', 0.5725485482644342)]
+Top 5 similar words of car - road + air are: [('air', 0.7705723956605658), ('jet', 0.7081067976099584), ('aircraft', 0.6688946238461012), ('planes', 0.647875176022994), ('vehicle', 0.6459682702465074)]
+Top 5 similar words of beer - man + woman are: [('drink', 0.7495275241390562), ('coffee', 0.6474857242881407), ('wine', 0.6216841250665271), ('tea', 0.6090591373358919), ('milk', 0.6002506191013566)]
+Top 5 similar words of professor - man + woman are: [('university', 0.7203815285651732), ('graduate', 0.7194379488958078), ('harvard', 0.7137388485251158), ('associate', 0.6536936253056168), ('graduated', 0.6516144895407865)]
+# Word analogy 1 under word2vec
+Top 5 similar words of king - man + woman are: [('queen', 0.8457585349186135), ('princess', 0.7087418588348995), ('mother', 0.6673123714361954), ('grandmother', 0.6552575321836963), ('daughter', 0.6470522986219152)]
+Top 5 similar words of paris - france + uk are: [('uk', 0.7415466824692821), ('london', 0.7247460852325537), ('1997', 0.5160252698695466), ('latest', 0.5069263268903809), ('brussels', 0.505015074988306)]
+Top 5 similar words of car - road + air are: [('air', 0.7832892818073094), ('force', 0.6523454474629414), ('aircraft', 0.6098131722945908), ('carrier', 0.6012582380692856), ('jet', 0.5858390457063141)]
+Top 5 similar words of beer - man + woman are: [('wine', 0.7427742765958745), ('coffee', 0.7328649859075164), ('drink', 0.7129832312569567), ('tea', 0.6548621238738753), ('tobacco', 0.6239540149480067)]
+Top 5 similar words of professor - man + woman are: [('associate', 0.7119014230824255), ('university', 0.6841853361052014), ('graduate', 0.6824807156458323), ('faculty', 0.6739283898719374), ('scientist', 0.6624997513666768)]
+# Word analogy 2 under GloVe
+Top 5 similar words of king - man + None are: [('emperor', 0.4144404649378318), ('iii', 0.40112766334566663), ('kingdom', 0.3805215705185763), ('duke', 0.3664006302431845), ('prince', 0.3422585842627695)]
+Top 5 similar words of paris - france + None are: [('downtown', 0.4270668635007059), ('manhattan', 0.42188068693442626), ('cairo', 0.3639248810656649), ('tel', 0.36155739546376764), ('broadway', 0.34683051383850877)]
+Top 5 similar words of car - road + None are: [('vehicle', 0.42478048296098525), ('driver', 0.40644165692889567), ('explosives', 0.38253891153263014), ('truck', 0.3809533643553657), ('cars', 0.37495020884628094)]
+Top 5 similar words of beer - man + None are: [('coffee', 0.4256772543505676), ('drink', 0.41709403566587505), ('wine', 0.40295889762890214), ('tea', 0.3554163312041881), ('milk', 0.34045930313091227)]
+Top 5 similar words of professor - man + None are: [('economics', 0.5625217194996551), ('faculty', 0.5112478494919698), ('harvard', 0.49374880133679144), ('sciences', 0.49044481487351294), ('graduate', 0.48237933285541346)]
+# Word analogy 1 under word2vec
+Top 5 similar words of king - man + None are: [('kings', 0.5024650094916743), ('queen', 0.45958190731139353), ('kingdom', 0.40953592735485134), ('prince', 0.39238341350773714), ('iii', 0.3704836655062582)]
+Top 5 similar words of paris - france + None are: [('apartment', 0.3126930720190334), ('room', 0.29330182796298626), ('baltimore', 0.2829228391422514), ('chicago', 0.2783864160092093), ('berlin', 0.2736220734504008)]
+Top 5 similar words of car - road + None are: [('cars', 0.4670606833677982), ('driver', 0.3978347808293589), ('chrysler', 0.3939017970921481), ('toyota', 0.3910631064592466), ('auto', 0.38929190222314847)]
+Top 5 similar words of beer - man + None are: [('coffee', 0.5357756393947662), ('wine', 0.5077166498766676), ('drink', 0.4989310090500216), ('tobacco', 0.4545523658035897), ('tea', 0.4382714109332909)]
+Top 5 similar words of professor - man + None are: [('faculty', 0.6075850942400985), ('university', 0.585665563412246), ('studied', 0.5850750457015322), ('graduate', 0.5732585335345384), ('economics', 0.5323325240716863)]

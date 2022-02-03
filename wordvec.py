@@ -77,18 +77,28 @@ class Lexicon:
         """Load information into coupled word-index mapping and embedding matrix."""
         self.word_emb_dict = {}
         ##################################################
-        # TODO Coding Task 1
+        # Coding Task 1
         # Read in content of the embedding file and save 
         # the word embeddings to some data structure
+        with open(file) as f:
+            first_line = next(f)  # peel off the special first line.
+            for line in f:  # all of the other lines are regular.
+                line_split = line.replace("\n","").split()
+                w = line_split[0]
+                vec = np.array([float(x) for x in line_split[1:]])
+                self.word_emb_dict[w] = vec
         ##################################################
 
     def get_vector(self, word: String):
         """Return word vector of a specific word"""
         ##################################################
-        # TODO Coding Task 1
+        # Coding Task 1
         # You might want to have a dedicated function
         # to return word vector of a specific word
-        return []
+        if word in self.word_emb_dict:
+            return self.word_emb_dict[word]
+        else:
+            log.error("Word {} is not available in the loaded embedding file".format(word))
         ##################################################
 
     def find_nearest_words(self, word, exclude_w, *, n = 5, plus: Optional[str] = None, minus: Optional[str] = None):
@@ -120,8 +130,34 @@ class Lexicon:
         # instead of looping over the rows.
 
         ##################################################
-        # TODO Coding Task 3 and 4
-        return []
+        # Coding Task 3 and 4
+        if plus == None and minus == None:
+            target_vec = self.word_emb_dict[word]
+        elif plus == None:
+            target_vec = self.word_emb_dict[word] - self.word_emb_dict[minus]
+        elif minus == None:
+            target_vec = self.word_emb_dict[word] + self.word_emb_dict[plus]
+        else:
+            target_vec = self.word_emb_dict[word] + self.word_emb_dict[plus] - self.word_emb_dict[minus]
+
+        vectors = np.zeros((len(self.word_emb_dict), len(self.word_emb_dict['dog'])))
+        vocab = list(self.word_emb_dict.keys())
+        
+        for k, v in enumerate(vocab):
+            vectors[k, :] = self.word_emb_dict[v]
+        
+        # target_vec is a 1D numpy array, vectors is a 2D numpy matrix
+        # we use .T to get transpose of the matrix
+        sims = cossim(target_vec, vectors.T)
+
+        # Beyond homework: You can use cosine_similarity function from sklearn if allowed
+        # from sklearn.metrics.pairwise import cosine_similarity
+        # sims = cosine_similarity(target_vec.reshape(1, -1), vectors)
+
+        sims = list(sims.reshape(-1))
+        top_n = list(zip(*sorted(enumerate(sims), key=lambda x:x[1], reverse=True)))[0][:n+len(exclude_w)]
+
+        return [(vocab[i], sims[i]) for i in top_n if vocab[i] not in exclude_w][:n]
         ##################################################
 
 def cossim(v1, v2):
@@ -132,8 +168,12 @@ def cossim(v1, v2):
     #       Consine similarity, a number between -1 and 1
     
     ##################################################
-    # TODO Coding Task 2
-    return 0
+    # Coding Task 2
+    # You can also use other way to compute norm, such as: np.sqrt(np.dot(v1, v1))
+    # We set axis=0 so the norm is calculated along the 0 axis rather than the matrix norm
+    # This function should work for both cases: 1) both v1 and v2 are 1-D array
+    #                                        or 2) v1 is 1D array and v2 is 2D matrix for batch calculation
+    return np.dot(v1, v2) / (np.linalg.norm(v1, axis=0) * np.linalg.norm(v2, axis=0))
     ##################################################
 
 def main():
