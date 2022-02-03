@@ -150,11 +150,11 @@ def main():
     log.info("Cosine similarity between {} and {} is: {}".format(args.word, "animal", cossim_result))
 
     log.info("{}\nCoding task 3: nearest neighbors".format("-"*10))
-    sim = lexicon.find_nearest_words(args.word, (args.word), n = args.n)
+    sim = lexicon.find_nearest_words(args.word, {args.word}, n = args.n)
     log.info("Top {} similar words of {} are: {}".format(args.n, args.word, sim))
 
     log.info("{}\nCoding task 4: word analogy".format("-"*10))
-    sim = lexicon.find_nearest_words(args.word, [args.word], n = args.n, minus = args.minus, plus = args.plus)
+    sim = lexicon.find_nearest_words(args.word, {args.word}, n = args.n, minus = args.minus, plus = args.plus)
     log.info("Top {} similar words of {} - {} + {} are: {}".format(args.n, args.word, args.minus, args.plus, sim))
 
 if __name__ == '__main__':
